@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Reseau/VLAN/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>VLAN - BSRC Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "VLAN";
+        var mkdocs_page_input_path = "Reseau\\VLAN.md";
+        var mkdocs_page_url = "/Reseau/VLAN/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BSRC Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Réseau</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../commandes-cisco/">Commandes-Cisco</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../NAT%20-%20PAT/">NAT</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">VLAN</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#lien-trunks">Lien Trunks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#activer-le-mode-trunk">Activer le mode Trunk</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#domaine-vtp">Domaine VTP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#attribution-des-interfaces-au-vlan">Attribution des Interfaces au VLAN</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sous-interface-routeur">Sous interface Routeur :</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - LINUX</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/Commande/">Commande de base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/john-the-ripper/">John The Ripper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/maxphisher/">Maxphisher</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - Windows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Windows/dns/">DNS</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BSRC Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Réseau</li>
+      <li class="breadcrumb-item active">VLAN</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vlan"><strong>VLAN</strong></h1>
+<h2 id="lien-trunks"><strong>Lien Trunks</strong></h2>
+<p>[  ] == élément variable (Interface, IP, Nom, etc….), <font style="color:grey" size="2">Ne pas inclure "[" et "]" dans la commande CLI</font></p>
+<p>{ } == option de commande  <font style="color:grey" size="2">Ne pas inclure "{" et "}" dans la commande CLI</font></p>
+<h3 id="activer-le-mode-trunk">Activer le mode Trunk</h3>
+<blockquote>
+<p>Activer le mode Trunk sur les port du switch :</p>
+</blockquote>
+<ul>
+<li>Sélection d’interface groupée :  <code>interface range [fastEthernet 0/23 - 24]</code> </li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\hookrightarrow</script>
+<em>ici Sélectionne les interface 23 et 24</em></p>
+<ul>
+<li>Activation des interfaces en mode Trunk : <code>switchport mode trunk</code></li>
+</ul>
+<h2 id="domaine-vtp"><strong>Domaine VTP</strong></h2>
+<p>Le domaine VTP permet de créer les VLAN automatiquement sur les switch avec le mode Trunk Activé. Pour fonctionner le switch doit être en mode ==Serveur== (Mode par défaut). </p>
+<p><strong>Pour changer de mode : <code>vtp mode {server}</code></strong>. <script type="math/tex; mode=display">\Rightarrow</script> =={server}{client}, {transparent}==</p>
+<ul>
+<li>Créer le domaine VTP : <code>vtp domain [NomDuDomaine]</code> </li>
+<li>Activer le <strong><em>Pruning</em></strong> <font style="color:grey" size="2">(Permet de restreindre la propagation des informations de VLAN aux liens nécessaires, réduisant ainsi la charge réseau inutile)</font> : <code>vtp pruning</code></li>
+<li>Créer un mot de passe pour le domaine : <code>vtp password [Password]</code></li>
+<li>Changer de Version de VTP (à faire sur chaque switch) : <code>vtp version {2}</code> <script type="math/tex; mode=display">\Rightarrow</script> =={1}{2}{3}==</li>
+<li>Afficher le mot de passe du domaine : <code>show vtp password</code></li>
+<li>Afficher l’état du domaine VTP : <code>show vtp status</code></li>
+</ul>
+<p>Connecter un Switch en mode ==Client==, ne pas oublier de définir le même mot de passe que  le domaine <code>vtp password [Password]</code></p>
+<ul>
+<li>Afficher les VLAN : <code>show vlan brief</code></li>
+</ul>
+<p>Un fois le réseau VTP créer, on peut créer les différents VLAN qui seront créer sur tous les switch relier en Trunk. </p>
+<p>(en mode <code>conf t</code>)</p>
+<ul>
+<li>Créer un VLAN : <code>VLAN [10]</code></li>
+<li>Nommé le VLAN : <code>name [Nom]</code></li>
+</ul>
+<h3 id="attribution-des-interfaces-au-vlan">Attribution des Interfaces au VLAN</h3>
+<p>Un fois les VLAN Créer nous pouvons attribué les interfaces leur correspondant :</p>
+<p>==<strong>(à faire sur chaque switch correspondant au bon VLAN)</strong>==</p>
+<p>(en mode <code>conf t</code>)</p>
+<ul>
+<li>Sélection d’interface groupée :  <code>interface range [fastEthernet 0/1 - 20]</code></li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\hookrightarrow</script> Ici Sélectionne les interface 1 a 20</p>
+<ul>
+<li>
+<p>Activation des interfaces en mode "Access": <code>switchport mode access</code></p>
+</li>
+<li>
+<p>Attribution des interfaces au VLAN: <code>switchport access vlan [10]</code></p>
+</li>
+</ul>
+<blockquote>
+<p>Si Trunk ne veut pas se mettre : <code>switchport trunk encapsulation dot1q</code></p>
+</blockquote>
+<h2 id="sous-interface-routeur"><strong>Sous interface Routeur :</strong></h2>
+<p>Un fois les VLAN créer, nous allons créer des sous interfaces dans la routeur pour pouvoir gérer les VLAN via 1 seule interface physique du routeur.</p>
+<p>(en mode <code>conf t</code> - Aucune adresse ip doit être attribuer a l’interface physique)</p>
+<ul>
+<li>
+<p>Création d’un sous interface : <code>interface fastEthernet [0/0.10]</code></p>
+</li>
+<li>
+<p>Attribution du VLAN : <code>encapsulation dot1Q [10]</code> ([10] = pour VLAN 10 par exemple.)</p>
+</li>
+<li>
+<p>attribution de l’ip : <code>ip address [172.16.10.254 255.255.255.0]</code> (= [ ip + Subnet Mask])</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>A faire pour chaque VLAN…</strong></p>
+</blockquote>
+<ul>
+<li>Vérifier les sous interfaces : <code>show ip interface brief</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../NAT%20-%20PAT/" class="btn btn-neutral float-left" title="NAT"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Systeme/Linux/Commande/" class="btn btn-neutral float-right" title="Commande de base">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../NAT%20-%20PAT/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Systeme/Linux/Commande/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

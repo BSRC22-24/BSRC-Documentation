@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Reseau/commandes-cisco/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Commandes-Cisco - BSRC Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Commandes-Cisco";
+        var mkdocs_page_input_path = "Reseau\\commandes-cisco.md";
+        var mkdocs_page_url = "/Reseau/commandes-cisco/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BSRC Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Réseau</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Commandes-Cisco</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vocabulaire">Vocabulaire</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#p1-routeurs">P.1 - Routeurs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#p11-configuration-basique">P1.1 - Configuration basique</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p12-routage-statique">P1.2 - Routage statique&#x20;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p13-dhcp-vlan">P1.3 - DHCP VLAN&#x20;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p14-securite">P1.4 - Sécurité</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p15-divers">P1.5 - Divers&#x20;</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#p2-switchs">P.2 - Switchs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#p21-configuration-dun-vlan-dans-un-switch">P2.1 - Configuration d'un VLAN dans un SWITCH</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p22-commande-sur-un-switch-cisco">P2.2 - Commande sur un switch CISCO</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#p3-les-acl">P.3 - Les ACL</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#p31-presentation">P3.1 - Présentation&#x20;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p32-creation-des-acl">P3.2 - Création des ACL</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ip-access-list-standardextended-nom-personnalise-du-acl">ip access-list [standard|extended] [Nom Personnalisé du ACL]&#x20;</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#p4-les-vlan">P.4 - Les VLAN&#x20;</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#p41-creation-dun-vlan">P4.1 - Création d'un VLAN&#x20;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p42-attribution-dun-port-a-un-vlan">P4.2 - Attribution d'un port à un VLAN</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p43-configurer-un-port-dagregation">P4.3 - Configurer un port d’agrégation</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../NAT%20-%20PAT/">NAT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../VLAN/">VLAN</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - LINUX</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/Commande/">Commande de base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/john-the-ripper/">John The Ripper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Linux/maxphisher/">Maxphisher</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - Windows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Systeme/Windows/dns/">DNS</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BSRC Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Réseau</li>
+      <li class="breadcrumb-item active">Commandes-Cisco</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="commandes-cisco">Commandes CISCO</h1>
+<h2 id="vocabulaire">Vocabulaire</h2>
+<ul>
+<li><code>Name</code> = Nom (ex : R1 )</li>
+<li><code>Password</code> = Mot De Passe (ex: cisco )</li>
+<li><code>Int</code> = Interface (ex: Fa0/0 )</li>
+<li><code>Ints</code> = Interfaces (range, ex: Fa0/0-24 )</li>
+<li><code>Ipv4</code> = Adresse IPV4 (ex: 192.168.1.254 )</li>
+<li><code>Mask</code> = Masque SR (ex: 255.255.255.0 )</li>
+<li><code>Network</code> = Adresse Réseau (ex: 192.168.1.0 )</li>
+<li><code>Cidr</code> = CIDR (ex: /24 )</li>
+<li><code>Vlan_id</code> = ID du vlan (ex: 10 )</li>
+<li><code>Vlan_name</code> = Nom du vlan (ex : SALES )</li>
+</ul>
+<h2 id="p1-routeurs"><mark style="background-color:yellow;">P.1 - Routeurs</mark></h2>
+<p>Liste des différentes commandes permettant la configuration d'un routeur CISCO dans Packet Tracer.</p>
+<p>Pour entrer dans le monde config: <code>en</code> (<em><strong>mode Privilège</strong></em>) puis <code>conf t</code> (<em><strong>mode Configuration</strong></em>) &amp; <code>wr</code> pour <strong>save</strong>.</p>
+<h3 id="p11-configuration-basique"><mark style="background-color:orange;">P1.1 - Configuration basique</mark></h3>
+<ul>
+<li>Changer l'Hostname : <code>hostname &lt;name&gt;</code></li>
+</ul>
+<details>
+
+<summary><strong>Configurer une interface</strong> : <code>interface &#x3C;int></code> <em>( <mark style="color:yellow;">int</mark> )</em>  </summary>
+
+* **Ajout IP** : `ip address <ipv4> <mask>` _( <mark style="color:yellow;">ip add</mark> )_
+
+<!---->
+
+* &#x20;**Activer l'interface** : `no shutdown` ( _<mark style="color:yellow;">no shut</mark>_ )
+
+<!---->
+
+* **Sortir** : `exit`&#x20;
+
+</details>
+
+<ul>
+<li><strong>Sortir du mode configuration</strong> : <code>exit</code> ( <em><mark style="color:yellow;">CTRL+Z</mark></em> )&#x20;</li>
+<li><strong>Sauvegarder la configuration</strong> : <code>copy running-config startup-config</code> ( <em><mark style="color:yellow;">wr</mark></em> )</li>
+<li><strong>Voir la configuration actuelle</strong> :   <code>show running-config</code> ( <em><mark style="color:yellow;">sh r</mark></em> )&#x20;</li>
+</ul>
+<h3 id="p12-routage-statique"><mark style="background-color:orange;">P1.2 - Routage statique</mark>&#x20;</h3>
+<ul>
+<li><strong>Ajouter une route</strong> : <code>ip route  &lt;network&gt; &lt;mask&gt; &lt;nexthop&gt;</code>&#x20;</li>
+<li><strong>Supprimer une route</strong> : <code>no ip route  &lt;network&gt; &lt;mask&gt; &lt;nexthop&gt;</code>&#x20;</li>
+</ul>
+<h3 id="p13-dhcp-vlan"><mark style="background-color:orange;">P1.3 - DHCP VLAN</mark>&#x20;</h3>
+<details>
+
+<summary>Création POOL pour VLAN : ip dhcp pool VLAN</summary>
+
+* **Définir le réseau** : `network <network> <mask>`&#x20;
+* **Définir le routeur** : `default-router <ipv4>`
+* **Définir le serveur DNS** : `dns-server <ipv4>`&#x20;
+
+</details>
+
+<h3 id="p14-securite"><mark style="background-color:orange;">P1.4 - Sécurité</mark></h3>
+<ul>
+<li><strong>Mettre mot de passe</strong> : <code>line console 0 &amp; password &lt;password&gt; &amp; login</code>&#x20;</li>
+</ul>
+<h3 id="p15-divers"><mark style="background-color:orange;">P1.5 - Divers</mark>&#x20;</h3>
+<ul>
+<li><strong>Transmettre requête DHCP</strong> : <code>ip helper-address &lt;ipv4&gt;</code></li>
+<li><strong>Voir liste client DHCP</strong> : <code>sh ip dhcp binding</code></li>
+</ul>
+<h2 id="p2-switchs"><mark style="background-color:yellow;">P.2 - Switchs</mark></h2>
+<p>Liste des différentes commandes permettant la configuration d'un switch CISCO dans Packet Tracer.</p>
+<p>Pour entrer dans le monde config: <code>en</code> (<em><strong>mode Privilège</strong></em>) puis <code>conf t</code> (<em><strong>mode Configuration</strong></em>) &amp; <code>wr</code> pour <strong>save</strong>.</p>
+<h3 id="p21-configuration-dun-vlan-dans-un-switch"><mark style="background-color:orange;">P2.1 - Configuration d'un VLAN dans un SWITCH</mark></h3>
+<details>
+
+<summary><strong>Configuration d'une range en mode TRUNK</strong> : <code>int range &#x3C;ints></code> </summary>
+
+* **Mode TRUNK** : `sw mode trunk` ( _<mark style="color:yellow;">sw mo tr</mark>_ )
+
+</details>
+
+<details>
+
+<summary><strong>Configuration VTP</strong> :</summary>
+
+* **Définir Domaine**  : `vtp domain <name>`&#x20;
+* **Définir MDP** : `vtp password <password>`&#x20;
+* **Afficher stats** : `show vtp status`&#x20;
+
+</details>
+
+<details>
+
+<summary><strong>Création d'un VLAN</strong> : <code>vlan &#x3C;vlan_id></code> </summary>
+
+* **Attribuer un NOM** : `name <vlan_name>`
+
+</details>
+
+<details>
+
+<summary><strong>Configuration d'une range en mode ACCESS</strong>: <code>int range &#x3C;ints></code></summary>
+
+* **Mode ACCESS** : `sw mode access` ( _<mark style="color:yellow;">sw mo ac</mark>_ )&#x20;
+* **Attribuer le vlan aux interfaces :** `sw access vlan <vlan_id>` ( _<mark style="color:yellow;">sw ac vlan \<vlan\_id></mark>_ )
+
+</details>
+
+<ul>
+<li><strong>Voir la configuration des VLAN</strong> : <code>show vlan brief</code> ( <em><mark style="color:yellow;">sh vlan br</mark></em> )</li>
+<li><strong>Transformer le type d'interface en mode routeur</strong> : <code>int &amp; no switchport</code> (<em>Sur SW L3 uniquement)</em>&#x20;</li>
+<li><strong>Autoriser le routage sur un switch L3</strong> : <code>ip routing</code></li>
+</ul>
+<details>
+
+<summary><strong>Créer l'interface d'un vlan</strong> : <code>int vlan &#x3C;vlan_id></code></summary>
+
+* **ajouter l'IP** : `ip add <mask>`
+
+</details>
+
+<h3 id="p22-commande-sur-un-switch-cisco"><mark style="background-color:orange;">P2.2 - Commande sur un switch CISCO</mark></h3>
+<p>1 - RESET SWITCH&#x20;</p>
+<ul>
+<li>Se connecter au commutateur via le câble console et s'assurer que la connexion est établie.</li>
+<li>Éteindre le commutateur et maintenir enfoncé le bouton Mode. Pendant que vous maintenez enfoncé le bouton Mode, allumez le commutateur. Continuez de maintenir enfoncé le bouton Mode<strong>.</strong></li>
+</ul>
+<p>Maintenez enfoncé le bouton Mode jusqu'à ce que vous voyiez la commande suivante :&#x20;</p>
+<p><em>flash_initboot</em></p>
+<p><em>boot</em></p>
+<p><em>switch:</em></p>
+<hr />
+<p><code>– flash_init</code></p>
+<p><code>– del flash:config.text</code></p>
+<p><code>– del flash:vlan.dat</code></p>
+<p><code>– boot</code></p>
+<h2 id="p3-les-acl"><mark style="background-color:yellow;">P.3 - Les ACL</mark></h2>
+<h3 id="p31-presentation"><mark style="background-color:orange;">P3.1 - Présentation</mark>&#x20;</h3>
+<p>Les <strong>ACL</strong>, pour <em><strong>A</strong>ccess <strong>C</strong>ontrol <strong>L</strong>ist</em>, sont des règles appliquées aux trafics transitant via les interfaces du routeur que ce soit en entrée (<em>in</em>) ou en sortie (<em>out</em>). Les ACL filtrent le trafic en demandant aux interfaces d’acheminer ou non les paquets qui y transitent.</p>
+<ul>
+<li><code>en</code> : <em><strong>mode Privilège</strong></em></li>
+<li><code>conf t</code> : <em><strong>mode Configuration</strong></em></li>
+<li><code>ip access-list standard &lt;nom des ACL&gt;</code> : pour créer des ACL standards</li>
+<li><code>show access-lists</code> : pour montrer toutes les ACL&#x20;</li>
+<li><code>permit host</code> : pour permettre la connexion d'une ip&#x20;</li>
+<li><code>deny any</code> : pour ne permettre aucune autre connexion déjà rentrée</li>
+<li><code>ip access-group &lt;nom des ACL&gt; in/out</code> : le in et out dépendent de où vous voulez sécurisez &#x20;</li>
+</ul>
+<h3 id="p32-creation-des-acl"><mark style="background-color:orange;">P3.2 - Création des ACL</mark></h3>
+<p><strong>Exemple : Appliquer l'ACL "prout" en sortie sur l'interface Fast Ethernet 0/1 :</strong>&#x20;</p>
+<ul>
+<li><code>en</code></li>
+<li><code>conf t</code></li>
+<li><code>int fastethernet0/1</code></li>
+<li><code>ip access-group prout out</code>&#x20;</li>
+</ul>
+<p>Exemple de création d'ACL  : &#x20;</p>
+<h4 id="ip-access-list-standardextended-nom-personnalise-du-acl"><em>ip access-list <mark style="color:orange;">[standard|extended]</mark> [<mark style="color:yellow;">Nom Personnalisé du ACL</mark>]</em>&#x20;</h4>
+<ul>
+<li>ip access-list <mark style="color:orange;">extended</mark> <mark style="color:yellow;">FTP-FILTER</mark>&#x20;</li>
+<li>tcp 192.168.10.0 0.0.0.255 any eq ftp</li>
+</ul>
+<p><em>Possibilité d'ajouter aussi :</em> <mark style="color:red;">[TCP|UDP]</mark> - (Facultatif) <mark style="color:green;">[eq(=equivalant)]</mark> - (Facultatif) <mark style="color:purple;">[Nom Protocol|Port]</mark></p>
+<ul>
+<li><mark style="color:blue;"><code>permit</code></mark> <mark style="color:red;"><code>tcp</code></mark><code>``192.168.10.0 0.0.0.255 any``</code><mark style="color:green;"><code>eq</code></mark> <mark style="color:purple;"><code>ftp</code></mark></li>
+</ul>
+<p><mark style="color:blue;">permit|deny</mark> : permission ou non d'accéder concernant l'adresse donnée&#x20;</p>
+<p><mark style="color:red;"><strong>DIFFÉRENCE TCP/UDP</strong></mark><strong> : TCP est de préférence utilisé pour les communications directes nécessitant une connexion fiable (navigation Web, e-mails, SMS et transfert de fichiers). UDP sert de préférence pour la transmission de données en direct et en temps réel, lorsque la vitesse est plus importante que la fiabilité</strong></p>
+<p>Exemple pour bloquer un ping entre deux appareils :&#x20;</p>
+<pre><code>Router(config)# access-list [nom de l'ACL] deny icmp [adresse-ip qui veut bloquer] [subnet-mask] [adresse-ip qui doit être bloquée] [son subnet-mask]
+</code></pre>
+<h2 id="p4-les-vlan"><mark style="background-color:yellow;">P.4 - Les VLAN</mark>&#x20;</h2>
+<h3 id="p41-creation-dun-vlan"><mark style="background-color:orange;">P4.1 - Création d'un VLAN</mark>&#x20;</h3>
+<p><strong>Étape 1. Entrez les commandes suivantes pour créer un VLAN :</strong>&#x20;</p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Objectif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vlan database</code></td>
+<td>Passez en mode de base de données VLAN.</td>
+</tr>
+<tr>
+<td><code>vlan</code></td>
+<td>Créez un nouveau VLAN avec un ID spécifié.</td>
+</tr>
+<tr>
+<td><code>end</code></td>
+<td>Quittez le mode de configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>La capture d'écran suivante présente les étapes nécessaires à la création d'un VLAN avec un ID de 200 :</p>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+<ul>
+<li><code>show vlan</code> : Afficher les informations VLAN&#x20;</li>
+</ul>
+<h3 id="p42-attribution-dun-port-a-un-vlan"><mark style="background-color:orange;">P4.2 - Attribution d'un port à un VLAN</mark></h3>
+<table>
+<thead>
+<tr>
+<th>switchport mode access</th>
+<th>Définit l'interface comme interface Ethernet non agrégée à VLAN unique non balisé. Un port d'accès peut transporter du trafic dans un seul VLAN.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switchport access vlan</td>
+<td>Spécifie le VLAN pour lequel ce port d'accès transportera le trafic.</td>
+</tr>
+<tr>
+<td>no shut</td>
+<td>Activez (activez) le port.</td>
+</tr>
+<tr>
+<td>end</td>
+<td>Quittez le mode de configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>La capture d'écran suivante présente les étapes requises pour configurer le port Gigabit Ethernet (gi2) en tant que port d'accès et l'affecter à VLAN 200.</p>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<h3 id="p43-configurer-un-port-dagregation"><mark style="background-color:orange;">P4.3 - Configurer un port d’agrégation</mark></h3>
+<table>
+<thead>
+<tr>
+<th>switchport mode trunk</th>
+<th>Sensibiliser le numéro de port spécifié à tous les VLAN.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switchport trunk allowed vlan add</td>
+<td>Fait du port un membre dans l'ID de VLAN spécifié et lui donne une règle de sortie : Étiqueté. Cela signifie que les paquets sont balisés avec l'ID de VLAN lorsqu'ils quittent ce port sur le périphérique.</td>
+</tr>
+<tr>
+<td>no shut</td>
+<td>Activez (activez) le port.</td>
+</tr>
+<tr>
+<td>end</td>
+<td>Quittez le mode de configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>Note: En mode trunk, tous les VLAN sont autorisés par défaut. L'utilisation de la commande switchport trunk allowed vlan add vous permet de configurer les VLAN autorisés sur l'agrégation.</p>
+<p>La capture d'écran suivante présente les étapes requises pour définir le port Gigabit Ethernet (gi3) comme port trunk et l'ajouter au VLAN 200 :&#x20;</p>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+<p>Entrez la commande suivante pour afficher des informations sur un port</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show interfaces switchport</td>
+<td>Affiche des informations telles que l'appartenance à un VLAN, la règle de sortie et les VLAN interdits pour le port spécifié.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../NAT%20-%20PAT/" class="btn btn-neutral float-right" title="NAT">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../NAT%20-%20PAT/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

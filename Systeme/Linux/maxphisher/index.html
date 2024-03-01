@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Linux/maxphisher/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Maxphisher - BSRC Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Maxphisher";
+        var mkdocs_page_input_path = "Systeme\\Linux\\maxphisher.md";
+        var mkdocs_page_url = "/Systeme/Linux/maxphisher/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BSRC Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Réseau</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/commandes-cisco/">Commandes-Cisco</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/NAT%20-%20PAT/">NAT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/VLAN/">VLAN</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - LINUX</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Commande/">Commande de base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../john-the-ripper/">John The Ripper</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Maxphisher</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pour-debian-ubuntu-kali-linux">Pour Debian (Ubuntu, Kali-Linux) :&#x20;</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cloner-le-repertoire">Cloner le répertoire :&#x20;</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entrer-dans-le-dossier">Entrer dans le dossier :&#x20;</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installer-tous-les-modules">Installer tous les modules :&#x20;</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#puis-directement-lancer">Puis directement lancer :&#x20;</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - Windows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Windows/dns/">DNS</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BSRC Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Système - LINUX</li>
+      <li class="breadcrumb-item active">Maxphisher</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="maxphisher">🐟 MaxPhisher</h1>
+<h4 id="pour-debian-ubuntu-kali-linux">Pour Debian (Ubuntu, Kali-Linux) :&#x20;</h4>
+<ul>
+<li><code>sudo apt install git python3 python3-pip php openssh-client -y</code></li>
+</ul>
+<h4 id="cloner-le-repertoire">Cloner le répertoire :&#x20;</h4>
+<ul>
+<li><code>git clone https://github.com/KasRoudra/MaxPhisher</code></li>
+</ul>
+<h4 id="entrer-dans-le-dossier">Entrer dans le dossier :&#x20;</h4>
+<ul>
+<li><code>cd MaxPhisher</code></li>
+</ul>
+<h4 id="installer-tous-les-modules">Installer tous les modules :&#x20;</h4>
+<ul>
+<li><code>pip3 install -r files/requirements.txt --break-system-packages</code></li>
+</ul>
+<h4 id="puis-directement-lancer">Puis directement lancer :&#x20;</h4>
+<pre><code>wget https://raw.githubusercontent.com/KasRoudra/MaxPhisher/main/maxphisher.py &amp;&amp; python3 maxphisher.py
+</code></pre>
+<p>Ou alors :&#x20;</p>
+<ul>
+<li><code>python3 maxphisher.py</code>\</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../john-the-ripper/" class="btn btn-neutral float-left" title="John The Ripper"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Windows/dns/" class="btn btn-neutral float-right" title="DNS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../john-the-ripper/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Windows/dns/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
