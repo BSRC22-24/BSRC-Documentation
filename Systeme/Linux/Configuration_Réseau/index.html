@@ -124,18 +124,18 @@ adduser [&quot;Nom d'utilisateur&quot;] [&quot;Nom de Groupe&quot;]
 <ul>
 <li>Configuré le réseaux :</li>
 </ul>
-<p>```
-  &lt;--------Statique---------&gt;
+<p>````
+  # Statique
   auto [nom int]
   iface [Nom int] inet(=ipv4) static
   address 192.168.1.100        # Your desired static IP address
   netmask 255.255.255.0        # Your subnet mask
   gateway 192.168.1.1          # Your gateway (router) IP address
   dns-nameservers 8.8.8.8      # DNS server(s) - You can add multiple servers</p>
-<p>&lt;--------DHCP--------&gt;
+<p># DHCP
   auto [Nom int]
   iface [Nom int] inet dhcp
-  ```</p>
+  ````</p>
 <ul>
 <li>Redémarrer le réseaux :</li>
 </ul>
