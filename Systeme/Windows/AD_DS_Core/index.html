@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Linux/maxphisher/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Windows/AD_DS_Core/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Maxphisher - BSRC Documentation</title>
+    <title>AD DS Core - BSRC Documentation</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Maxphisher";
-        var mkdocs_page_input_path = "Systeme\\Linux\\maxphisher.md";
-        var mkdocs_page_url = "/Systeme/Linux/maxphisher/";
+        var mkdocs_page_name = "AD DS Core";
+        var mkdocs_page_input_path = "Systeme\\Windows\\AD_DS_Core.md";
+        var mkdocs_page_url = "/Systeme/Windows/AD_DS_Core/";
       </script>
     
     <!--[if lt IE 9]>
@@ -57,37 +57,33 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Système - LINUX</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Commande/">Commande de base</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/Commande/">Commande de base</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../Configuration_réseau.md">Configuration Réseau</a>
+                  <li class="toctree-l1"><a class="" href="../../Linux/Configuration_réseau.md">Configuration Réseau</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../john-the-ripper/">John The Ripper</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/john-the-ripper/">John The Ripper</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Maxphisher</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#pour-debian-ubuntu-kali-linux">Pour Debian (Ubuntu, Kali-Linux) :&#x20;</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#cloner-le-repertoire">Cloner le répertoire :&#x20;</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#entrer-dans-le-dossier">Entrer dans le dossier :&#x20;</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installer-tous-les-modules">Installer tous les modules :&#x20;</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#puis-directement-lancer">Puis directement lancer :&#x20;</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/maxphisher/">Maxphisher</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Système - Windows</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Windows/dns/">DNS</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dns/">DNS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Windows/AD_DS_Core/">AD DS Core</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">AD DS Core</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ajouter-le-role-ad-ds">Ajouter le rôle AD DS:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creer-un-domaine-aslocal">Créer un domaine "as.local"</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ajouter-un-sous-domaine-au-domaine-aslocal">Ajouter un sous domaine au domaine "as.local"</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Windows/DFS/">DFS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../DFS/">DFS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Windows/Remote_Services/">Remote Services</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Remote_Services/">Remote Services</a>
                   </li>
               </ul>
       </div>
@@ -104,8 +100,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Système - LINUX</li>
-      <li class="breadcrumb-item active">Maxphisher</li>
+          <li class="breadcrumb-item">Système - Windows</li>
+      <li class="breadcrumb-item active">AD DS Core</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -114,36 +110,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="maxphisher">🐟 MaxPhisher</h1>
-<h4 id="pour-debian-ubuntu-kali-linux">Pour Debian (Ubuntu, Kali-Linux) :&#x20;</h4>
-<ul>
-<li><code>sudo apt install git python3 python3-pip php openssh-client -y</code></li>
-</ul>
-<h4 id="cloner-le-repertoire">Cloner le répertoire :&#x20;</h4>
-<ul>
-<li><code>git clone https://github.com/KasRoudra/MaxPhisher</code></li>
-</ul>
-<h4 id="entrer-dans-le-dossier">Entrer dans le dossier :&#x20;</h4>
-<ul>
-<li><code>cd MaxPhisher</code></li>
-</ul>
-<h4 id="installer-tous-les-modules">Installer tous les modules :&#x20;</h4>
-<ul>
-<li><code>pip3 install -r files/requirements.txt --break-system-packages</code></li>
-</ul>
-<h4 id="puis-directement-lancer">Puis directement lancer :&#x20;</h4>
-<pre><code>wget https://raw.githubusercontent.com/KasRoudra/MaxPhisher/main/maxphisher.py &amp;&amp; python3 maxphisher.py
+                <h1 id="ad-ds-core">AD DS Core</h1>
+<h4 id="ajouter-le-role-ad-ds">Ajouter le rôle AD DS:</h4>
+<pre><code class="language-shell">Add-WindowsFeature -Name AD-Domain-Services –IncludeManagementTools 
 </code></pre>
-<p>Ou alors :&#x20;</p>
+<h4 id="creer-un-domaine-aslocal">Créer un domaine "as.local"</h4>
+<pre><code class="language-shell">Install-ADDSForest -DatabasePath C:\Windows\NTDS -DomainMode 7 -DomainName AS.local -
+DomainNetbiosName AS -ForestMode 7 -InstallDns:$false -LogPath C:\Windows\NTDS -
+NoRebootOnCompletion:$true -SysvolPath C:\Windows\SYSVOL -Force:$true
+</code></pre>
+<h4 id="ajouter-un-sous-domaine-au-domaine-aslocal">Ajouter un sous domaine au domaine "as.local"</h4>
+<pre><code class="language-shell">Install-ADDSDomain -ParentDomainName &quot;as.local&quot; -Credential (Get-Credential) -InstallDns:$false -SkipPreChecks
+</code></pre>
+<blockquote>
+<p>Il faudra saisir par la suite :</p>
 <ul>
-<li><code>python3 maxphisher.py</code>\</li>
+<li>Saisir le nom du sous domaine (uniquement le sous domaine)</li>
+<li>Puis définir un mot de passe </li>
 </ul>
+</blockquote>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../john-the-ripper/" class="btn btn-neutral float-left" title="John The Ripper"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../Windows/dns/" class="btn btn-neutral float-right" title="DNS">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../dns/" class="btn btn-neutral float-left" title="DNS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DFS/" class="btn btn-neutral float-right" title="DFS">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -166,10 +157,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../john-the-ripper/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../dns/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../Windows/dns/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../DFS/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

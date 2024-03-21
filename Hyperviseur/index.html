@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Hyperviseur/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Hyperviseur - BSRC Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hyperviseur";
+        var mkdocs_page_input_path = "Hyperviseur.md";
+        var mkdocs_page_url = "/Hyperviseur/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BSRC Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Hyperviseur</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#esxi">ESXi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vswitch">VSwitch</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hyper-v">Hyper-V</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#proxmox">Proxmox</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vswitch_1">VSwitch :</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creer-une-vm">Créer une VM :</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Réseau</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Reseau/commandes-cisco/">Commandes-Cisco</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Reseau/NAT%20-%20PAT/">NAT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Reseau/VLAN/">VLAN</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - LINUX</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Linux/Commande/">Commande de base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../Systeme/Linux/Configuration_réseau.md">Configuration Réseau</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Linux/john-the-ripper/">John The Ripper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Linux/maxphisher/">Maxphisher</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - Windows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Windows/dns/">DNS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Windows/AD_DS_Core/">AD DS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Windows/DFS/">DFS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Systeme/Windows/Remote_Services/">Remote Services</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BSRC Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Hyperviseur</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="hyperviseur">Hyperviseur</h1>
+<h2 id="esxi">ESXi</h2>
+<blockquote>
+<p>[!important]</p>
+<p>Il y a toujours un interface réservé a l’hyperviseur.</p>
+</blockquote>
+<p>Pour pouvoir avoir plusieurs réseau sur le même serveur, il faut créer des Vswitch, une fois créé on doit attribuer ces Switch virtuel a des ports en créer des Groupes de port.</p>
+<h3 id="vswitch">VSwitch</h3>
+<p>Accéder a la catégorie <code>Mise en réseaux</code> dans le menu de gauche, Dans le sous menu  <code>Commutateur virtuel</code> cliquez sur  <code>Ajouter un Commutateur virtuel</code> :</p>
+<ul>
+<li>Donner nom a ce commutateur et choisissez la liaison (Interface Physique; noté active si un câble est connecté )</li>
+<li>Dans le sous menu <code>Groupe de Port</code>, cliquez sur <code>ajouter un groupe de port</code>. Donnez lui un <strong>nom </strong>et attribuez lui un **commutateur virtuel **</li>
+</ul>
+<h2 id="hyper-v">Hyper-V</h2>
+<p>Ouvrir le <strong>Gestionnaire Hyper-V</strong> via le menu <code>Outils</code>.</p>
+<h2 id="proxmox">Proxmox</h2>
+<p>Pour chaque réseaux, il faut 1 port RJ45. Il faut 1 port supplementaire pour la machine hyperviseur. Pour 2 machines virtuelles sur reseau diff, il faut donc 3 ports RJ45 (2 pour les VM + 1 hyperviseur)</p>
+<p>Dans le menu <code>Server View</code>, derouler le menu <code>Datacenter</code>, et cliquer sur [==NomDuServeur==]</p>
+<h3 id="vswitch_1">VSwitch :</h3>
+<p>Accéder au menu <code>Network</code> en déroulant le menu <code>System</code>. </p>
+<p>Créer un nouveau VSwitch en cliquant sur <code>Create</code> &gt; <code>Linux Bridge</code>.</p>
+<p>Remplir les informations du formulaire avec l<strong>e nom du Bridge</strong>, l’<strong>IP</strong>, son <strong>masque en notation CIDR</strong> et le <strong>port </strong>Physique de la machine (format : <strong>enp1s0</strong>)</p>
+<blockquote>
+<p>[!CAUTION]</p>
+<p>Il ne peut y avoir qu’une seule passerelle pour tout les Bridges (laisser la première d’origine)</p>
+</blockquote>
+<h3 id="creer-une-vm">Créer une VM :</h3>
+<p>Cliquer en haut a droite sur <code>Create VM</code> et remplissez les informations demandés.</p>
+<blockquote>
+<p>Dans le le menu <code>Network</code>, verifiez bien le <strong>Bridge</strong>, Laisser le <code>model</code>par defaut.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Reseau/commandes-cisco/" class="btn btn-neutral float-right" title="Commandes-Cisco">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Reseau/commandes-cisco/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

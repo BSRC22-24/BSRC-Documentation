@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Windows/Remote_Services/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Remote Services - BSRC Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Remote Services";
+        var mkdocs_page_input_path = "Systeme\\Windows\\Remote_Services.md";
+        var mkdocs_page_url = "/Systeme/Windows/Remote_Services/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BSRC Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Hyperviseur/">Hyperviseur</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Réseau</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/commandes-cisco/">Commandes-Cisco</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/NAT%20-%20PAT/">NAT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Reseau/VLAN/">VLAN</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - LINUX</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/Commande/">Commande de base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../Linux/Configuration_réseau.md">Configuration Réseau</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/john-the-ripper/">John The Ripper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Linux/maxphisher/">Maxphisher</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Système - Windows</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dns/">DNS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../AD_DS_Core/">AD DS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DFS/">DFS</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Remote Services</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#i-installation-du-role-services-bureau-a-distance">I ) Installation du rôle Services Bureau à Distance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ii-installation-des-services-bureau-a-distance">II) Installation des Services Bureau à distance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#iii-ajouter-une-application-au-remote-desktop">III) Ajouter une application au Remote Desktop</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-telecharger-linstallateur-de-votre-application-ici-libreoffice">A) Télécharger l’installateur de votre application (ici : LibreOffice)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iv-acces-au-remoteapp">IV ) Accès au RemoteAPP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v-creation-dun-raccourcie">V) Création d’un raccourcie :</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BSRC Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Système - Windows</li>
+      <li class="breadcrumb-item active">Remote Services</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="services-bureau-a-distance">Services Bureau à distance</h2>
+<h4 id="i-installation-du-role-services-bureau-a-distance">I ) Installation du rôle <code>Services Bureau à Distance</code></h4>
+<p>On accède au menu <code>Gérer</code> &gt; <code>Ajouter des rôles et fonctionnalités</code>. </p>
+<p>Dans la section <em>Avant de commencer</em> cliquer sur <code>Suivant &gt;</code>; </p>
+<p>Dans la section <em>Sélectionner le type d’installation</em>, sélectionner <code>Installation basée sur un rôle ou une fonctionnalité</code>;</p>
+<p>Dans la section <em>Sélectionner le serveur de destination</em>, sélectionner le <em>serveur</em> puis cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans  le section <em>Sélectionner des rôles de serveurs</em>, sélectionner <span style='background:Orange; color:black'>Services Bureau à distance</span> puis cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans la section <em>Sélectionner des fonctionnalités</em> cliquer sur <code>Suivant &gt;</code></p>
+<p>Dans la section <em>Services Bureau à distance</em>, cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans la section <em>sélectionner des services de rôle</em>, sélectionner <span style='background:Orange; color:black'>Accès Bureau a distance par web</span>, <span style='background:Orange; color:black'>Passerelle des  services Bureau à distance</span>, <span style='background:Orange; color:black'>Hôte de session Bureau a distance</span> et <span style='background:Orange; color:black'>Service Broker pour les connexions Bureau à distance</span> puis cliquer sur <code>Suivant &gt;</code>;</p>
+<p><img alt="rd1" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\rd1.PNG" /></p>
+<p>Dans la Section <em>Rôle Web Server (IIS)</em>, cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans la section <em>sélectionner des services de rôle</em>, cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans la section <em>Services de stratégie et d’accès réseau</em>, cliquer sur <code>Suivant &gt;;</code></p>
+<p>Dans la section <em>Confirmer les sélections d’installation</em>, cliquer sur <code>Installer</code>.</p>
+<h4 id="ii-installation-des-services-bureau-a-distance">II) Installation des Services Bureau à distance</h4>
+<p>On accède au menu <code>Gérer</code> &gt; <code>Ajouter des rôles et fonctionnalités</code>. </p>
+<p>Dans la section <em>Avant de commencer</em> cliquer sur <code>Suivant &gt;</code>; </p>
+<p>Dans la section <em>Sélectionner le type d’installation</em>, sélectionner <code>Installation des services Bureau à distance</code>;</p>
+<p>Dans la section <em>Sélectionner le type de déploiement</em>, sélectionner <code>Démarrage rapide</code> </p>
+<p>Dans la section <em>Sélectionner le scénario de déploiement</em>, sélectionner <code>Déploiement de bureaux basés sur une session</code>;</p>
+<p>Dans la section <em>Sélectionner un serveur</em>, cliquer sur <code>Suivant &gt;</code></p>
+<p>Dans la section <em>Confirmer les sélections</em>, cocher <code>Redémarrer automatiquement le serveur de destination si nécessaire</code> et cliquez sur <code>Déployer</code>.</p>
+<blockquote>
+<p>Une fois le service installer, on peut cliquer sur le lien en bas de la fenêtre pour atteindre la page de connexion au RemoteAPP</p>
+<p>&#9888;  <strong>Un redémarrage du serveur peut être nécessaire.</strong></p>
+</blockquote>
+<p><img alt="rd2" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\rd2.PNG" /></p>
+<p><img alt="rd3" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\rd3.PNG" /></p>
+<h4 id="iii-ajouter-une-application-au-remote-desktop">III) Ajouter une application au Remote Desktop</h4>
+<h6 id="a-telecharger-linstallateur-de-votre-application-ici-libreoffice">A) Télécharger l’installateur de votre application (ici : LibreOffice)</h6>
+<p><img alt="image-20240111102524663" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111102524663.png" /></p>
+<ul>
+<li>Accéder au <code>Panneau de configuration</code> &gt; <code>Programmes</code> et cliquer sur <span style='background:Orange; color:black'>Installer une application sur un serveur Bureau à distance</span></li>
+</ul>
+<p><img alt="image-20240111102632193" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111102632193.png" /></p>
+<p>Depuis la fenêtre d’installation, cliquer sur <code>Suivant &gt;</code>, et choisir l’application a ajouter : </p>
+<p><img alt="image-20240111103132849" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111103132849.png" /></p>
+<p>Suivre les instructions de l’installateur de l’application: </p>
+<p><img alt="image-20240111103732554" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111103732554.png" /></p>
+<ul>
+<li>Sur le <em>Services Bureau à distance</em>, accéder a <code>QuickSessionCollection</code>, au niveau de la section <code>PROGRAMMES REMOTEAPP</code> cliquer sur <code>TACHES</code> &gt; <code>Publier des programmes RemoteApp</code></li>
+</ul>
+<p><img alt="image-20240111104532837" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111104532837.png" /></p>
+<p>On sélectionne le programme à ajouter :</p>
+<p><img alt="image-20240111104918693" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111104918693.png" /></p>
+<p>Puis on confirme en cliquant sur <code>Publier</code></p>
+<p><img alt="image-20240111105144445" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111105144445.png" /></p>
+<p>Le logiciel à a bien été ajouté !</p>
+<p><img alt="image-20240111105423893" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111105423893.png" /></p>
+<h6 id="iv-acces-au-remoteapp">IV ) Accès au RemoteAPP</h6>
+<p><span style='background:Orange; color:black'>URL : domaine/RDweb</span> ou URL : <span style='background:Orange; color:black'>ip/RDweb</span></p>
+<p><img alt="image-20240111105724906" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111105724906.png" /></p>
+<p><img alt="image-20240111105847598" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111105847598.png" /></p>
+<p>Un fois connecter, on peut accéder aux applications en s’identifiant :</p>
+<p><img alt="image-20240111110012047" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110012047.png" /></p>
+<p><img alt="image-20240111110145813" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110145813.png" /></p>
+<p><img alt="image-20240111110209649" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110209649.png" /></p>
+<p><img alt="image-20240111110245039" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110245039.png" /></p>
+<p>On a accès a l’application</p>
+<h6 id="v-creation-dun-raccourcie">V) Création d’un raccourcie :</h6>
+<p>On entre le lien de la page dans le raccourci et on nome le raccourcie : </p>
+<p><img alt="image-20240111110525075" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110525075.png" /></p>
+<p><img alt="image-20240111110548301" src="C:\Users\schmi\OneDrive\Images\Typora\Remote Services\image-20240111110548301.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../DFS/" class="btn btn-neutral float-left" title="DFS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../DFS/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

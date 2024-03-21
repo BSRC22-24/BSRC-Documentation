@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Windows/dns/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Windows/DFS/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>DNS - BSRC Documentation</title>
+    <title>DFS - BSRC Documentation</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "DNS";
-        var mkdocs_page_input_path = "Systeme\\Windows\\dns.md";
-        var mkdocs_page_url = "/Systeme/Windows/dns/";
+        var mkdocs_page_name = "DFS";
+        var mkdocs_page_input_path = "Systeme\\Windows\\DFS.md";
+        var mkdocs_page_url = "/Systeme/Windows/DFS/";
       </script>
     
     <!--[if lt IE 9]>
@@ -69,17 +69,15 @@
               </ul>
               <p class="caption"><span class="caption-text">Système - Windows</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DNS</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#configuration-dune-zone-directe">Configuration d'une zone directe</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#configuration-dune-zone-inversee">Configuration d'une zone inversée&#x20;</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dns/">DNS</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../AD_DS_Core/">AD DS Core</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../DFS/">DFS</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DFS</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#i-installation-du-role-replication-dfs">I ) Installation du rôle Réplication DFS</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Remote_Services/">Remote Services</a>
                   </li>
@@ -99,7 +97,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Système - Windows</li>
-      <li class="breadcrumb-item active">DNS</li>
+      <li class="breadcrumb-item active">DFS</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -108,40 +106,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="dns">DNS</h1>
-<ul>
-<li>Renommer son serveur pour se retrouver plus facilement plus tard&#x20;</li>
-<li>Directement aller changer votre IP en statique :  <em>(exemple)</em>&#x20;</li>
-</ul>
-<p><img alt="" src="https://lh7-us.googleusercontent.com/1vylt0WzUNSJfVu8U0_M25GOiY1nX8-0s4RkDMaFieIPbWZuIO7sM6jOsojriYgQv81j3VW5nXEOBmYxOfgP6RuCT4ILylc3MD29ApS_15XhFVVJhQ2DlyjVJ7UfQChcHN0aV3UPwiXN9zWIA3B22h8" /></p>
-<ul>
-<li>Se diriger ensuite dans les fonctionnalité de votre serveur pour ajouter les rôles du DNS&#x20;</li>
-</ul>
-<p><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Ajout des rôles DNS</p></figcaption></p>
-<h3 id="configuration-dune-zone-directe"><mark style="color:red;">Configuration d'une zone directe</mark></h3>
-<ul>
-<li>Ensuite se diriger dans son DNS pour configurer une zone :&#x20;</li>
-<li>Effectuer un clique droit sur le dossier "<strong><code>Zone de recherche direct</code></strong>"&#x20;</li>
-</ul>
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Renommer sa zone selon votre choix</p></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
-
-<ul>
-<li>Ce qui donnera comme résultat ceci :&#x20;</li>
-</ul>
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
-<h3 id="configuration-dune-zone-inversee"><mark style="color:Red;">Configuration d'une zone inversée</mark>&#x20;</h3>
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+                <h2 id="dfs">DFS</h2>
+<h4 id="i-installation-du-role-replication-dfs">I ) Installation du rôle <code>Réplication DFS</code></h4>
+<p>On accède au menu <code>Gérer</code> &gt; <code>Ajouter des rôles et fonctionnalités</code>. </p>
+<p>Dans la section <em>Avant de commencer</em> cliquer sur <code>Suivant &gt;</code>; </p>
+<p>Dans la section <em>Sélectionner le type d’installation</em>, sélectionner <code>Installation basée sur un rôle ou une fonctionnalité</code>;</p>
+<p>Dans la section <em>Sélectionner le serveur de destination</em>, sélectionner le <em>serveur</em> puis cliquer sur <code>Suivant &gt;</code>;</p>
+<p>Dans  le section <em>Sélectionner des rôles de serveurs</em>, sélectionner ==Réplication DFS== puis cliquer sur <code>Suivant &gt;</code>;</p>
+<p><img alt="image-20240111135342626" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111135342626.png" /></p>
+<p>Accéder au menu <code>Gestion du sytème de fichier distribué DFS</code></p>
+<p><img alt="image-20240111135614293" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111135614293.png" /></p>
+<p>Cliquer sur <code>Réplication</code> &gt; Cliquer <code>Nouveau groupe de réplication</code> &gt; Sélectionner <code>Groupe de réplication mutli-usage</code></p>
+<p><img alt="image-20240111140013763" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111140013763.png" /></p>
+<p>Renseigner un Nom et le domaine (auto-rempli normalement)</p>
+<p><img alt="image-20240111140409572" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111140409572.png" /></p>
+<blockquote>
+<p><span style=color:red>&#9888;  Il faut avoir installer le rôle <code>Réplication DFS</code> sur <strong>tout </strong>les serveurs concernés par le transfère`</span></p>
+</blockquote>
+<p>Ajouter ensuite les serveurs concerné pour la réplication  </p>
+<p><img alt="image-20240111143031100" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111143031100.png" /></p>
+<p>Sélectionner <code>MAile Pleine</code> :</p>
+<p><img alt="image-20240111143115039" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111143115039.png" /></p>
+<p>Sélectionner <code>Répliquer en continu à l'aide de la bande passante spcécifiée</code></p>
+<p><img alt="image-20240111143813432" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111143813432.png" /></p>
+<p>Sélectionner le membre Principal et cliquer </p>
+<p><img alt="image-20240111155053116" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111155053116.png" /></p>
+<p>Puis cliquer sur <code>Ajouter</code> pour sélectionner les dossiers a répliquer : <em>[DFSRoots = Nom sans importance]</em></p>
+<p><img alt="image-20240111162114015" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111162114015.png" /></p>
+<p>Cliquer sur <code>Suivant</code> une fois que le dossier est choisi.</p>
+<p>Choisir ensuite le chemin de destination où les dossiers seront répliqué <em>[DFSRoots = Nom sans importance]</em></p>
+<p><img alt="image-20240111163014792" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111163014792.png" /></p>
+<p>Cliquer ensuite sur <code>suivant</code> puis <code>Créer</code></p>
+<p><img alt=" " src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111163544857.png" /></p>
+<p>On peut voir que la réplication a bien été prise en compte :</p>
+<p><strong><span style=color:red>Serveur1</span></strong> | <strong><span style=color:lightblue>Serveur 2</span></strong></p>
+<p><img alt="image-20240111164942734" src="C:\Users\schmi\OneDrive\Images\Typora\DFS\image-20240111164942734.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../Linux/maxphisher/" class="btn btn-neutral float-left" title="Maxphisher"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../AD_DS_Core/" class="btn btn-neutral float-right" title="AD DS Core">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../AD_DS_Core/" class="btn btn-neutral float-left" title="AD DS Core"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Remote_Services/" class="btn btn-neutral float-right" title="Remote Services">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -164,10 +169,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../Linux/maxphisher/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../AD_DS_Core/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../AD_DS_Core/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Remote_Services/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

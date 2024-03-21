@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Linux/Commande/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Systeme/Linux/Configuration_R%C3%A9seau/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Commande de base - BSRC Documentation</title>
+    <title>Configuration Réseau - BSRC Documentation</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Commande de base";
-        var mkdocs_page_input_path = "Systeme\\Linux\\Commande.md";
-        var mkdocs_page_url = "/Systeme/Linux/Commande/";
+        var mkdocs_page_name = "Configuration R\u00e9seau";
+        var mkdocs_page_input_path = "Systeme\\Linux\\Configuration_R\u00e9seau.md";
+        var mkdocs_page_url = "/Systeme/Linux/Configuration_R%C3%A9seau/";
       </script>
     
     <!--[if lt IE 9]>
@@ -57,10 +57,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Système - LINUX</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Commande de base</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Commande/">Commande de base</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="../Configuration_réseau.md">Configuration Réseau</a>
                   </li>
@@ -94,8 +92,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Système - LINUX</li>
-      <li class="breadcrumb-item active">Commande de base</li>
+      <li class="breadcrumb-item active">Configuration Réseau</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -104,72 +101,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="linux">🐧 Linux</h1>
+                <h1 id="configuration-reseau">Configuration Réseau</h1>
+<h4 id="ajouter-sudo">Ajouter Sudo</h4>
+<pre><code class="language-bash">apt update
+
+apt install sudo
+
+adduser [&quot;Nom d'utilisateur&quot;] [&quot;Nom de Groupe&quot;]
+</code></pre>
+<blockquote>
+<p>==?==  <code>sudo !!</code> reprend la commande précédente avec élévation de privilege</p>
+</blockquote>
 <ul>
-<li><code>sudo</code> - permet à un utilisateur d'exécuter une commande avec des privilèges d'administrateur</li>
-<li><code>ls</code> - Liste les fichiers et répertoires dans le répertoire courant.</li>
-<li><code>cd</code> - Change le répertoire courant.</li>
-<li><code>cd /</code> - Pour retourner au répertoire racine sur un système Linux</li>
-<li><code>cd -</code> - Pour retourner au répertoire précédent sur un système Linux</li>
-<li><code>pwd</code> - Affiche le chemin du répertoire courant.</li>
-<li><code>mkdir</code> - Crée un nouveau répertoire.</li>
-<li><code>rm</code> - Supprime des fichiers ou des répertoires.</li>
-<li><code>cp</code> - Copie des fichiers et des répertoires.</li>
-<li><code>mv</code> - Déplace ou renomme des fichiers et des répertoires.</li>
-<li><code>touch</code> - Crée un nouveau fichier vide.</li>
-<li><code>cat</code> - Affiche le contenu d'un fichier.</li>
-<li><code>less</code> - Permet de lire le contenu d'un fichier page par page.</li>
-<li><code>head</code> - Affiche les premières lignes d'un fichier.</li>
-<li><code>tail</code> - Affiche les dernières lignes d'un fichier.</li>
-<li><code>grep</code> - Recherche des motifs dans des fichiers.</li>
-<li><code>chmod</code> - Modifie les permissions d'accès aux fichiers.</li>
-<li><code>chown</code> - Modifie le propriétaire et le groupe d'un fichier.</li>
-<li><code>sudo</code> - Exécute une commande avec des privilèges d'administration.</li>
-<li><code>ps</code> - Affiche les processus en cours d'exécution.</li>
-<li><code>kill</code> - Termine un processus.</li>
-<li><code>top</code> - Affiche les processus en cours d'exécution en temps réel.</li>
-<li><code>df</code> - Affiche l'utilisation de l'espace disque.</li>
-<li><code>du</code> - Affiche l'espace disque utilisé par les fichiers et répertoires.</li>
-<li><code>tar</code> - Archive des fichiers dans un seul fichier.</li>
-<li><code>zip</code> - Compresse des fichiers dans un fichier zip.</li>
-<li><code>unzip</code> - Décompresse des fichiers à partir d'un fichier zip.</li>
-<li><code>wget</code> - Télécharge des fichiers depuis le Web.</li>
-<li><code>curl</code> - Permet de transférer des données depuis ou vers un serveur.</li>
-<li><code>ssh</code> - Se connecte à un serveur distant de manière sécurisée.</li>
-<li><code>scp</code> - Copie des fichiers entre des ordinateurs via SSH.</li>
-<li><code>history</code> - Affiche l'historique des commandes exécutées.</li>
-<li><code>nano</code> - lire un fichier</li>
-<li><code>rsync</code> <strong>:</strong> Cette commande permet de synchroniser et de copier des fichiers et des répertoires locaux ou distants</li>
-<li><code>sudo apt update &amp;&amp; sudo apt upgrade</code> : Pour mettre à jour tous vos packets&#x20;</li>
-<li><code>apt-get install php php-mysql</code> : Installez php&#x20;</li>
-<li><code>apt-get install apache2</code> : Installez apache&#x20;</li>
-<li><code>crontab -e</code> : accéder aux crontab&#x20;</li>
-<li><code>sudo ip addr add &lt;adresse_ip&gt;/&lt;masque&gt; dev &lt;interface&gt;</code>  : pour définir une adresse ip sur une interface réseau sous Linux&#x20;</li>
+<li>Afficher les configuration réseaux : </li>
 </ul>
-<details>
-
-<summary>Création d'utilisateur : </summary>
-
-* `sudo useradd -m <nom_utilisateur>` : Cette commande crée un nouvel utilisateur avec le nom spécifié. L'option `-m` crée également un répertoire personnel pour l'utilisateur dans _**/home/nom\_utilisateur**_
-* Vous devrez définir un mot de passe pour cet utilisateur à l'aide de la commande `passwd` : `sudo passwd <nom_utilisateur>`
-* Utilisez la commande `usermod` pour ajouter l'utilisateur au groupe `sudo` : `sudo usermod -aG sudo <nom_utilisateur>`
-
-</details>
-
-<details>
-
-<summary><strong>Télécharger un fichier en utilisant wget et le décompresser avec tar :</strong></summary>
-
-`wget -O-` http://exemple.com/fichier.tar.gz | `tar xvz -C` /chemin/destination/
-
-</details>
+<p><code>bash
+  nano /etc/network/interfaces</code></p>
+<ul>
+<li>Configuré le réseaux :</li>
+</ul>
+<p>```bash
+  ### Static ##
+  auto [nom int]
+  iface [Nom int] inet(=ipv4) static
+  address 192.168.1.100        # Your desired static IP address
+  netmask 255.255.255.0        # Your subnet mask
+  gateway 192.168.1.1          # Your gateway (router) IP address
+  dns-nameservers 8.8.8.8      # DNS server(s) - You can add multiple servers</p>
+<p>### DHCP ###
+  auto [Nom int]
+  iface [Nom int] inet dhcp
+  ```</p>
+<ul>
+<li>Redémarrer le réseaux</li>
+</ul>
+<p><code>bash
+  systemctl restart networking</code></p>
+<p><code>ipconfig</code>= <code>ip a</code></p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../../Reseau/VLAN/" class="btn btn-neutral float-left" title="VLAN"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../john-the-ripper/" class="btn btn-neutral float-right" title="John The Ripper">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -191,10 +162,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../../Reseau/VLAN/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../john-the-ripper/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
