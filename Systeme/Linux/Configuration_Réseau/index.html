@@ -115,33 +115,31 @@ apt install sudo
 adduser [&quot;Nom d'utilisateur&quot;] [&quot;Nom de Groupe&quot;]
 </code></pre>
 <blockquote>
-<p>==?==  <code>sudo !!</code> reprend la commande précédente avec élévation de privilege</p>
+<p>&#x1F50E;  <code>sudo !!</code> reprend la commande précédente avec élévation de privilège</p>
 </blockquote>
 <ul>
 <li>Afficher les configuration réseaux : </li>
 </ul>
-<p><code>bash
-  nano /etc/network/interfaces</code></p>
+<p><code>nano /etc/network/interfaces</code></p>
 <ul>
 <li>Configuré le réseaux :</li>
 </ul>
-<p>```bash
-  ### Static ##
+<p>```
+  &lt;--------Statique---------&gt;
   auto [nom int]
   iface [Nom int] inet(=ipv4) static
   address 192.168.1.100        # Your desired static IP address
   netmask 255.255.255.0        # Your subnet mask
   gateway 192.168.1.1          # Your gateway (router) IP address
   dns-nameservers 8.8.8.8      # DNS server(s) - You can add multiple servers</p>
-<p>### DHCP ###
+<p>&lt;--------DHCP--------&gt;
   auto [Nom int]
   iface [Nom int] inet dhcp
   ```</p>
 <ul>
-<li>Redémarrer le réseaux</li>
+<li>Redémarrer le réseaux :</li>
 </ul>
-<p><code>bash
-  systemctl restart networking</code></p>
+<p><code>systemctl restart networking</code></p>
 <p><code>ipconfig</code>= <code>ip a</code></p>
               
             </div>
